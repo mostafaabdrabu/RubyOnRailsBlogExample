@@ -1,14 +1,21 @@
-<p>
-<strong>Commenter:</strong>
-<%= comment.commenter %>
-</p>
-
-<p>
-<strong>Comment:</strong>
-<%= comment.body %>
-</p>
-
-<p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-md-6">
+                        <%= comment.commenter %>
+                    </div>
+                    <div class="col-md-6 text-right">
+                    <%= link_to 'Delete', [comment.article, comment],
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <%= comment.body %>
+            </div>
+        </div>
+    </div>
+</div>
