@@ -1,0 +1,26 @@
+<%= form_with url: sub_add_path do |form| %>
+    <div class="row">
+    <div class="col-md-6">
+        <%= form.label :Operator %><br>
+        <%= form.select(:operatorCode, [['Vodafone', '60202'], ['Orange', '60201'], ['Etisalat', '60203']], {}, { :class => 'form-control' }) %>
+    </div>
+  </div>
+  <br>
+    <div class="row">
+      <div class="col-md-6">
+        <%= form.label :"Mobile Number" %><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <%= form.text_field :msisdn, class: "form-control" %>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <%= form.submit "Subscribe", class: 'btn btn-success'  %>
+      </div>
+    </div>
+  <% end %>
+    

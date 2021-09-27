@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root "articles#index"
   
+  get "/sub", to: "subscription#index"
+  get "/sub/add", to: "subscription#index"
+  post "/sub/add", to: "subscription#addSubscriptionContract"
+  get "/sub/verify", to: "subscription#index"
+  post "/sub/verify", to: "subscription#verifySubscription"
   resources :articles do
     resources :comments
   end

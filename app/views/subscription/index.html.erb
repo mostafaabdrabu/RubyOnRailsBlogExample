@@ -1,0 +1,17 @@
+<h1>Subscription</h1>
+<% if @errorMessage != "" %>
+<div class="row">
+<div class="col-md-6">
+<div class="alert alert-danger" role="alert"><%= @errorMessage %></div>
+</div>
+</div>
+<% end %>
+<% if @step == 1 %>
+<%= render "msisdn" %>
+<% end %>
+<% if @step == 2 %>
+<%= render "pincode", subscriptionContractId: @subscriptionContractId %>
+<% end %>
+<% if @step == 3 %>
+<%= render "success" %>
+<% end %>

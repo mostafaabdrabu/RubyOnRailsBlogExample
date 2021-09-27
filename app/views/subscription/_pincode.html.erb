@@ -1,0 +1,21 @@
+<%= form_with url: sub_verify_path do |form| %>
+  <br>
+    <div class="row">
+      <div class="col-md-6">
+        <%= form.label :pincode %><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <%= form.text_field :pinCode, class: "form-control" %>
+      </div>
+    </div>
+    <%= form.hidden_field :subscriptionContractId, value: @subscriptionContractId %>
+    <br>
+    <div class="row">
+      <div class="col-md-6">
+        <%= form.submit "Subscribe", class: 'btn btn-success'  %>
+      </div>
+    </div>
+  <% end %>
+    
